@@ -40,6 +40,7 @@ class PageController extends Controller
                 $this->get('mailer')->send($message);
 
                 $this->get('session')->getFlashBag()->add('blogger-notice', 'Your contact enquiry was successfully sent. Thank you!');
+                $this->get('session')->getFlashBag()->add('blogger-notice', 'Some second blog notice');
 
                 // Redirect - This is important to prevent users re-posting
                 // the form if they refresh the page
